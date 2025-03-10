@@ -19,3 +19,138 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.group{
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse)) !important;
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse))) !important;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.shadow-sticky .text-white{
+  color: #0a0a0a;
+}
+
+.bg-dark{
+  background-color: #212331;
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+
+/* custom css start */
+.title-border, .title-border-white {
+  margin-bottom: 20px;
+  margin-top: 8px;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+.title-border:before, .title-border-white:before {
+  bottom:-2px;
+  height:7px;
+  left:-10px;
+  width:24px
+}
+.title-border:after,
+.title-border:before {
+  background:#283148;
+  border-radius:8px;
+  content:"";
+  position:absolute
+}
+.title-border-white:after,
+.title-border-white:before {
+  background:#ffffff;
+  border-radius:8px;
+  content:"";
+  position:absolute
+}
+.title-border:after, .title-border-white:after {
+  bottom:0px;
+  height:3px;
+  left:-50px;
+  width:100px
+}
+
+.hero-waves .wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+  fill: #2e324e;
+  opacity: 0.6;
+}
+
+.hero-waves .wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+  fill: #a18c69;
+  opacity: 0.4;
+}
+
+.hero-waves .wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+  fill: #a18c69;
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+/* custom css end */
+
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+}
