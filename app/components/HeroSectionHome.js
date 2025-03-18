@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import baseUrl from "../../navigation/base";
 // import VideoComponent from "./VideoComponent";
+import Image from "next/image";
 import WaveSVG from "./WaveSVG";
 
 const HeroSection = () => {
@@ -30,7 +31,14 @@ const HeroSection = () => {
           {/* <img src="./aboutusimage2.jpg" alt="Hero" className="rounded-lg shadow-lg" /> */}
           {/* <VideoComponent /> */}
           <div className="w-full flex justify-center p-4">
-            <video 
+            <Image
+              src={member.image}  // ✅ Use absolute path in `public/`
+              alt={member.image}
+              width={500}  // ✅ Set width and height
+              height={350}
+              className="rounded-lg shadow-lg"
+            />
+            {/* <video 
               className="w-full rounded-2xl shadow-lg" 
               preload="auto" 
               loop 
@@ -44,7 +52,7 @@ const HeroSection = () => {
                 type="video/mp4" 
               />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </div>
         </div>
       </div>
