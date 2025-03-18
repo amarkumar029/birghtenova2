@@ -5,7 +5,7 @@
 //     return { props: { teamMembers } };
 // }
 
-// const baseUrl = "https://magadhuniversity.ac.in/nodeapi";
-const baseUrl = "http://localhost:8000/nodeapi";
+const baseUrl = "https://kisancollege.co.in/nodeapi";
+// const baseUrl = "http://localhost:8000/nodeapi";
 
 export default baseUrl;
