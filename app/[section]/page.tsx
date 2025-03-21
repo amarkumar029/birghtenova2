@@ -104,7 +104,7 @@ const SectionPage = () => {
 
   return (
     <>
-      <Breadcrumb pageName={pageTitle} />
+      <Breadcrumb pageName={pageTitle as string} />
       <section className="container my-10 p-6 bg-white rounded-md">
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <div className="flex flex-wrap w-full">
@@ -112,7 +112,6 @@ const SectionPage = () => {
             <div className={menuMap[section as string] ? "md:w-9/12 w-full" : "md:w-12/12 w-full"}>
                 <DynamicSection
                     type={`cms?type=${breadcrumbMap[section as string] || "Default"}`}
-                    title=""
                     layout="cms"
                     sublayout="subcms"
                 />
@@ -123,7 +122,6 @@ const SectionPage = () => {
             <div className="md:w-3/12 w-full">
               <DynamicSection 
                 type={`menu?type=${menuMap[section as string] || "Default"}`}
-                title="" 
                 layout="cms" 
                 sublayout="submenu" 
               />
