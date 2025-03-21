@@ -21,7 +21,7 @@ import {
 //   FaPhone: FaPhone,
 // };
 
-const DynamicSection = ({ type, title, layout, sublayout }) => {
+const DynamicSection = ({ type, layout, sublayout }) => {
   const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState(null);
   const [openIndex, setOpenIndex] = useState(null); // For FAQ toggle
