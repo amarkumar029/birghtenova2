@@ -26,23 +26,23 @@ const Page = () => {
             <h2 className="text-3xl font-bold text-white">The Numbers Say It All</h2>
             <div className="title-border-white"></div>
           </div>
-          <DynamicSection type="cms?type=Numbers" layout="numbers" />
+          <DynamicSection type="cms?type=Numbers" layout="numbers" sublayout="" />
         </div>
       </section>
-      <DynamicSection type="cms?type=Service" layout="grid" />
+      <DynamicSection type="cms?type=Service" layout="grid" sublayout="" />
       <section className="py-16 bg-gray-100 rounded-md">
         <div className="text-center mb-2">
           <h2 className="text-3xl font-bold">OUR SCHOOL FACILITIES</h2>
           <div className="title-border"></div>
         </div>
-        <DynamicSection type="cms?type=Facility" layout="facility" />
+        <DynamicSection type="cms?type=Facility" layout="facility" sublayout="" />
       </section>
       <section className="py-16 bg-white rounded-md">
         <div className="text-center mb-2">
           <h2 className="text-3xl font-bold">Latest Brightenova International School Barbigha</h2>
           <div className="title-border"></div>
         </div>
-        <DynamicSection type="cms?type=Latest" layout="facility" />
+        <DynamicSection type="cms?type=Latest" layout="facility" sublayout="" />
       </section>
     </div>
   );
