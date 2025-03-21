@@ -4,21 +4,22 @@ import baseUrl from "../../navigation/base";
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  FaAward, FaShieldAlt, FaMapMarkerAlt, 
-  FaRegEnvelope, FaPhone, FaAngleRight 
+  // FaAward, FaShieldAlt, FaMapMarkerAlt, 
+  // FaRegEnvelope, FaPhone, 
+  FaAngleRight 
 } from "react-icons/fa";
-import { AiOutlineCheckCircle, AiFillSun } from "react-icons/ai";
+// import { AiOutlineCheckCircle, AiFillSun } from "react-icons/ai";
 
 // 🔄 Icon Mapping Object
-const iconMap = {
-  FaAward: FaAward,
-  FaShieldAlt: FaShieldAlt,
-  AiOutlineCheckCircle: AiOutlineCheckCircle,
-  AiFillSun: AiFillSun,
-  FaMapMarkerAlt: FaMapMarkerAlt,
-  FaRegEnvelope: FaRegEnvelope,
-  FaPhone: FaPhone,
-};
+// const iconMap = {
+//   FaAward: FaAward,
+//   FaShieldAlt: FaShieldAlt,
+//   AiOutlineCheckCircle: AiOutlineCheckCircle,
+//   AiFillSun: AiFillSun,
+//   FaMapMarkerAlt: FaMapMarkerAlt,
+//   FaRegEnvelope: FaRegEnvelope,
+//   FaPhone: FaPhone,
+// };
 
 const DynamicSection = ({ type, title, layout, sublayout }) => {
   const [data, setData] = useState([]);
