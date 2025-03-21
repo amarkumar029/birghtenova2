@@ -6,9 +6,9 @@ const Breadcrumb = ({ pageName }: { pageName: string }) => {
     >
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 md:w-8/12 lg:w-7/12">
-            <div className="max-w-[570px] md:mb-0">
-              <h1 className="my-5 text-3xl font-bold text-white sm:text-3xl">
+          <div className="w-full px-4">
+            <div className="md:mb-0">
+              <h1 className="my-5 text-3xl text-white sm:text-3xl">
                 {pageName}
               </h1>
             </div>

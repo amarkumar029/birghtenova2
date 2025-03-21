@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import baseUrl from "../../../navigation/base";
-import { FaMapMarkerAlt, FaRegEnvelope, FaPhone, } from "react-icons/fa";
+import { FaMapMarkerAlt, FaRegEnvelope, FaPhone, FaAngleRight } from "react-icons/fa";
 import Link from "next/link";
 
 interface ContactType {
@@ -41,7 +41,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="relative z-10 bg-dark pt-16 dark:bg-gray-dark md:pt-16 lg:pt-16">
+      <footer className="relative z-10 bg-[#a18b6a] pt-16 dark:bg-gray-dark md:pt-16 lg:pt-16">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
@@ -56,7 +56,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -77,7 +77,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -100,7 +100,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -119,7 +119,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="hover:text-primary"
                   >
                     <svg
                       width="17"
@@ -143,57 +143,65 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Home
+                      <FaAngleRight /> Home
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/about"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/about-us"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      About Us
+                      <FaAngleRight /> About Us
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/alumni"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/mission-vision"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Alumni Area
+                      <FaAngleRight /> Mission & Vision
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/our-founder"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Contact Us
+                      <FaAngleRight /> Our Founder
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/media"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/nursery-level"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Media
+                      <FaAngleRight /> Nursery Level
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/career"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/primary-level"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Career
+                      <FaAngleRight /> Primary Level
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/blogs"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/learning-environment"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Blogs
+                      <FaAngleRight /> Learning Environment
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/faculty"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
+                    >
+                      <FaAngleRight /> Faculty
                     </Link>
                   </li>
                 </ul>
@@ -206,66 +214,66 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/learnleap"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/admission-process"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Learnleap
+                      <FaAngleRight /> Admission Process
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/franchise-preschool"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/admission-form"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Franchise Preschool
+                      <FaAngleRight /> Admission Form
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/franchise-k12"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/campus-overview"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Franchise K12
+                      <FaAngleRight /> Campus Overview
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/school-transformation"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/career"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      School Transformation
+                      <FaAngleRight /> Career
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/soul-science"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/faqs"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Soul Science
+                      <FaAngleRight /> FAQs
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/special-projects"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/contact-us"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Special Projects
+                      <FaAngleRight /> Contact Us
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/partner-with-us"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href="/holiday-homework"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Partner With Us
+                      <FaAngleRight /> Holiday Homework
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/privacy-policy"
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
-                      Privacy Policy
+                      <FaAngleRight /> Privacy Policy
                     </Link>
                   </li>
                 </ul>
@@ -281,7 +289,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="#" onClick={(e) => e.preventDefault()}
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-white"
                     >
                       <FaMapMarkerAlt style={{ display: "inline-block" }} /> {contact[0]?.address}
                     </Link>
@@ -289,7 +297,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href={`mailto:${contact[0]?.email || "#"}`}
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-white"
                     >
                       <FaRegEnvelope style={{ display: "inline-block" }} /> {contact[0]?.email}
                     </Link>
@@ -297,7 +305,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href={`tel:${contact[0]?.phone || "#"}`}
-                      className="mb-4 inline-block text-white text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-white"
                     >
                       <FaPhone style={{ display: "inline-block" }} /> {contact[0]?.phone}
                     </Link>

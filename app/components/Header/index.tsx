@@ -1,12 +1,19 @@
-"use client";
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-// import ThemeToggler from "./ThemeToggler";
+import baseUrl from "../../../navigation/base";
+import { FaRegEnvelope, FaPhone } from "react-icons/fa";
 import menuData from "./menuData";
 
+interface ContactType {
+  email?: string;
+  phone?: string;
+}
+
 const Header = () => {
+  const [contact, setContact] = useState<ContactType[]>([]);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
@@ -34,6 +41,15 @@ const Header = () => {
   };
 
   const pathname = usePathname();
+        
+  useEffect(() => {
+  async function fetchContact() {
+    const res = await fetch(`${baseUrl}/contact`);
+    const contact = await res.json();
+    setContact(contact);
+  }
+  fetchContact();
+  }, []);
 
   return (
     <section>
@@ -62,36 +78,26 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="flex md:w-2/3 items-center justify-between text-center px-4">
-            <Link
-              href="/franchise-preschool"
-              className={`w-full rounded-md font-semibold bg-[#283148] text-white ${
-                sticky ? "py-5 lg:py-2" : "p-3 mr-2"
-              } `}
-            >
-              Franchise-Preschool
-            </Link>
-            <Link
-              href="/franchise-k12"
-              className={`w-full rounded-md font-semibold bg-[#283148] text-white ${
-                sticky ? "py-5 lg:py-2" : "p-3 mr-2"
-              } `}
-            >
-              Franchise-K12
-            </Link>
-            <Link
-              href="/school-transformation"
-              className={`w-full rounded-md font-semibold bg-[#283148] text-white ${
-                sticky ? "py-5 lg:py-2" : "p-3"
-              } `}
-            >
-              School Transformation
-            </Link>
-          </div>
+          <ul className="md:w-2/2 items-center justify-between text-left px-4 py-1 rounded-md bg-[#a18b6a] text-white">
+            <li>
+              <Link
+                href={`tel:${contact[0]?.phone || "#"}`}
+              >
+                <FaPhone style={{ display: "inline-block" }} /> {contact[0]?.phone}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`mailto:${contact[0]?.email || "#"}`}
+              >
+                <FaRegEnvelope style={{ display: "inline-block" }} /> {contact[0]?.email}
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center lg:bg-[#283148] ${
+        className={`header left-0 top-0 z-40 flex w-full items-center lg:bg-[#a18b6a] ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "relative"
@@ -205,26 +211,6 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                    <li className="block lg:hidden">
-                      <Link
-                        href="/franchise-preschool"
-                        className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                      >
-                        Franchise-Preschool
-                      </Link>
-                      <Link
-                        href="/franchise-k12"
-                        className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                      >
-                        Franchise-K12
-                      </Link>
-                      <Link
-                        href="/school-transformation"
-                        className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                      >
-                        School Transformation
-                      </Link>
-                    </li>
                   </ul>
                 </nav>
               </div>

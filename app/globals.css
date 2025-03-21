@@ -47,6 +47,38 @@ body {
 }
 
 /* custom css start */
+.widget-title-v2 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 35px;
+  margin-left: -10px;
+  padding-left: 20px;
+  position: relative;
+  text-transform: capitalize;
+  background: #495360 none repeat scroll 0 0;
+}
+.widget-title-v2:before {
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -10px;
+  content: "";
+  height: 0;
+  left: -10px;
+  position: absolute;
+  width: 0;
+  border-right: 10px solid #283442;
+}
+.widget-title-v2:after {
+  background: rgba(0, 0, 0, 0) url('/widget-title-bg.png') repeat scroll 0 0;
+  content: "";
+  height: 36px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+}
 .title-border, .title-border-white {
   margin-bottom: 20px;
   margin-top: 8px;
