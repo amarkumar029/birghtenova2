@@ -12,7 +12,7 @@ const SectionPage = () => {
   const breadcrumbMap: { [key: string]: string } = {
     // Pehla Set (Academics, Facilities, Admissions, etc.)
     "about-us": "About Us",
-    "mission-vision": "Mission & Vision",
+    "mission-vision": "Mission and Vision",
     "our-founder": "Our Founder",
     "principal-message": "Principal Message",
   
@@ -30,8 +30,8 @@ const SectionPage = () => {
     "labs": "Labs",
     "library": "Library",
     "art-room": "Art Room",
-    "music-dance-rooms": "Music & Dance Rooms",
-    "yoga-aerobics": "Yoga & Aerobics",
+    "music-dance-rooms": "Music and Dance Rooms",
+    "yoga-aerobics": "Yoga and Aerobics",
     "swimming-pool": "Swimming Pool",
     "playground": "Playground",
     "infirmary": "Infirmary",
