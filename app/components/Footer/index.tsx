@@ -222,14 +222,6 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/admission-form"
-                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
-                    >
-                      <FaAngleRight /> Admission Form
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="/campus-overview"
                       className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
@@ -246,26 +238,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/faqs"
-                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
-                    >
-                      <FaAngleRight /> FAQs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="/contact-us"
                       className="mb-4 inline-block text-white flex items-center hover:ml-1"
                     >
                       <FaAngleRight /> Contact Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/holiday-homework"
-                      className="mb-4 inline-block text-white flex items-center hover:ml-1"
-                    >
-                      <FaAngleRight /> Holiday Homework
                     </Link>
                   </li>
                   <li>

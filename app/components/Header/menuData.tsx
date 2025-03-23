@@ -197,12 +197,6 @@ const menuData: Menu[] = [
         newTab: false,
       },
       {
-        id: 32,
-        title: "Admission Form",
-        path: "/admission-form",
-        newTab: false,
-      },
-      {
         id: 33,
         title: "Fee Structure",
         path: "/fee-structure",
@@ -220,18 +214,6 @@ const menuData: Menu[] = [
     id: 35,
     title: "Career",
     path: "/career",
-    newTab: false,
-  },
-  {
-    id: 36,
-    title: "Download",
-    path: "/download",
-    newTab: false,
-  },
-  {
-    id: 37,
-    title: "Newsletter",
-    path: "/newsletter",
     newTab: false,
   },
 ];
